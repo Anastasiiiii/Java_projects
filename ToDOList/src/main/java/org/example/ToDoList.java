@@ -4,6 +4,10 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.File;
+import java.io.InputStream;
+
+import static java.awt.Font.createFont;
 
 public class ToDoList extends JFrame implements ActionListener {
     //taskPanel is a container for taskComponentPanel
@@ -23,6 +27,7 @@ public class ToDoList extends JFrame implements ActionListener {
 
     private void addGuiComponents(){
         JLabel bannerLabel = new JLabel("To Do List");
+        bannerLabel.setFont(createFont("resources/Itim-Regular.ttf", 36f));
         bannerLabel.setBounds(
                 (CommonConstants.GUI_SIZE.width - bannerLabel.getPreferredSize().width)/2,
                 15,
@@ -56,6 +61,18 @@ public class ToDoList extends JFrame implements ActionListener {
         this.getContentPane().add(scrollPane);
         this.getContentPane().add(addTaskButton);
     }
+
+    private Font createFont(String resource, float size) {
+        try (InputStream fontStream = getClass().getClassLoader().getResourceAsStream(resource)) {
+            if (fontStream != null) {
+                return Font.createFont(Font.TRUETYPE_FONT, fontStream).deriveFont(size);
+            }
+        } catch (Exception e) {
+            System.out.println("Error loading font: " + e.getMessage());
+        }
+        return new Font("SansSerif", Font.PLAIN, Math.round(size));  // Fallback font
+    }
+
 
     @Override
     public void actionPerformed(ActionEvent e) {
