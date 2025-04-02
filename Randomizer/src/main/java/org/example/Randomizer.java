@@ -67,6 +67,7 @@ public class Randomizer extends JFrame implements ActionListener {
         generateNumberButton.setBackground(new Color(255, 182, 193));
         generateNumberButton.setBorder(new LineBorder(new Color(255, 182, 193), 2));
         generateNumberButton.setForeground(Color.DARK_GRAY);
+        generateNumberButton.setFocusPainted(false);
 
         generateNumberButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt){
