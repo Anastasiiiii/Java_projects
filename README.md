@@ -17,16 +17,6 @@ A pink-themed random number generator with min/max input.
 
 ---
 
-### ✅ ToDo List
-
-A simple ToDo List app to manage tasks using a user-friendly interface.
-
-![ToDo List](assets/todoList.jpg)
-
-📁 [View Code](./ToDOList)
-
----
-
 ### 🐍 Snake Game
 
 A classic snake game clone with colorful visuals and two screenshots:
@@ -40,5 +30,15 @@ A classic snake game clone with colorful visuals and two screenshots:
 | ![Field](./assets/snake_game_field.jpg) | ![Result](./assets/snake_game_result.jpg) |
 
 📁 [View Code](./Games)
+
+---
+
+### ✅ ToDo List
+
+A simple ToDo List app to manage tasks using a user-friendly interface.
+
+![ToDo List](assets/todoList.jpg)
+
+📁 [View Code](./ToDOList)
 
 ---
